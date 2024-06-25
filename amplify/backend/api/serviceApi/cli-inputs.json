@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "paths": {
+    "/services": {
+      "name": "/services",
+      "lambdaFunction": "serviceFunction",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

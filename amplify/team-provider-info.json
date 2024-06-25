@@ -1,0 +1,33 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-datafoundrytest-dev-14154-authRole",
+      "UnauthRoleArn": "arn:aws:iam::211125647484:role/amplify-datafoundrytest-dev-14154-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::211125647484:role/amplify-datafoundrytest-dev-14154-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-datafoundrytest-dev-14154-deployment",
+      "UnauthRoleName": "amplify-datafoundrytest-dev-14154-unauthRole",
+      "StackName": "amplify-datafoundrytest-dev-14154",
+      "StackId": "arn:aws:cloudformation:us-east-1:211125647484:stack/amplify-datafoundrytest-dev-14154/fda8a8a0-32ab-11ef-ae9a-0e45a15df905",
+      "AmplifyAppId": "d25z4iec0g453l",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-datafoundrytest-dev-14154-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "function": {
+        "serviceFunction": {
+          "deploymentBucketName": "amplify-datafoundrytest-dev-14154-deployment",
+          "s3Key": "amplify-builds/serviceFunction-4a444a62426131736e2b-build.zip"
+        }
+      },
+      "auth": {
+        "datafoundrytest": {}
+      },
+      "api": {
+        "serviceApi": {}
+      },
+      "storage": {
+        "s3bucket": {}
+      }
+    }
+  }
+}

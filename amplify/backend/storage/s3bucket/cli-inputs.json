@@ -1,0 +1,13 @@
+{
+  "resourceName": "s3bucket",
+  "policyUUID": "a3a4fcc5",
+  "bucketName": "s3bucket-data-foundry-dev",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
