@@ -7,7 +7,7 @@ import awsmobile from 'aws-exports';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 // eslint-disable-next-line import/no-unresolved
 import '@aws-amplify/ui-react/styles.css';
-
+// push commits
 Amplify.configure(awsmobile);
 
 const App = () => {
