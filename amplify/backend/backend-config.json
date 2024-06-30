@@ -1,6 +1,6 @@
 {
   "api": {
-    "serviceApi": {
+    "servicesApi": {
       "dependsOn": [
         {
           "attributes": [
@@ -16,7 +16,8 @@
     }
   },
   "auth": {
-    "datafoundrytest": {
+    "datafoundrytest7f8922e9": {
+      "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
         "mfaConfiguration": "OFF",
@@ -31,14 +32,15 @@
           "EMAIL"
         ],
         "socialProviders": [],
-        "usernameAttributes": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
         "verificationMechanisms": [
           "EMAIL"
         ]
       },
       "providerPlugin": "awscloudformation",
-      "service": "Cognito",
-      "serviceType": "managed"
+      "service": "Cognito"
     }
   },
   "function": {
@@ -71,6 +73,10 @@
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
       "service": "S3"
+    },
+    "serviceRequests": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
     }
   }
 }

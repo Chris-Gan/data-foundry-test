@@ -1,13 +1,13 @@
 export type AmplifyDependentResourcesAttributes = {
   "api": {
-    "serviceApi": {
+    "servicesApi": {
       "ApiId": "string",
       "ApiName": "string",
       "RootUrl": "string"
     }
   },
   "auth": {
-    "datafoundrytest": {
+    "datafoundrytest7f8922e9": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
       "IdentityPoolId": "string",
@@ -30,6 +30,14 @@ export type AmplifyDependentResourcesAttributes = {
     "s3bucket": {
       "BucketName": "string",
       "Region": "string"
+    },
+    "serviceRequests": {
+      "Arn": "string",
+      "Name": "string",
+      "PartitionKeyName": "string",
+      "PartitionKeyType": "string",
+      "Region": "string",
+      "StreamArn": "string"
     }
   }
 }

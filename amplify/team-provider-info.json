@@ -16,17 +16,18 @@
       "function": {
         "serviceFunction": {
           "deploymentBucketName": "amplify-datafoundrytest-dev-14154-deployment",
-          "s3Key": "amplify-builds/serviceFunction-4a444a62426131736e2b-build.zip"
+          "s3Key": "amplify-builds/serviceFunction-62627155392b54736c6c-build.zip"
         }
       },
-      "auth": {
-        "datafoundrytest": {}
-      },
       "api": {
-        "serviceApi": {}
+        "servicesApi": {}
       },
       "storage": {
-        "s3bucket": {}
+        "s3bucket": {},
+        "serviceRequests": {}
+      },
+      "auth": {
+        "datafoundrytest7f8922e9": {}
       }
     }
   }

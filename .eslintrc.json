@@ -31,11 +31,15 @@
             }
         ],
         "react/jsx-props-no-spreading": [2, { "custom": "ignore" }],
-        "no-console": "off"
+        "no-console": "off",
+        "import/no-unresolved": "off",
+        "import/no-extraneous-dependencies": "off"
     },
     "settings": {
         "import/resolver": {
-            "typescript": {}
+            "typescript": {
+                "alwaysTryTypes": true
+            }
         }
     }
 }

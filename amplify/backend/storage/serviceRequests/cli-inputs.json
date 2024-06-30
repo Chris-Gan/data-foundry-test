@@ -1,0 +1,10 @@
+{
+  "resourceName": "serviceRequests",
+  "tableName": "ServiceRequests",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
