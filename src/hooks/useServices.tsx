@@ -37,6 +37,7 @@ const useServices = (): {
             } else {
                 await refetch();
                 dispatch(toggleForm());
+                dispatch(setServiceRequestForm(requestServiceFormInitValues));
                 dispatch(
                     setSnackbar({
                         isOpen: true,
