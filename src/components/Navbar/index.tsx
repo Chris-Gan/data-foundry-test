@@ -1,15 +1,14 @@
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { AppBar, Button, IconButton, Toolbar, Tooltip, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Theme } from '@mui/material/styles';
 
 interface Props {
+    theme: Theme;
     handleThemeButtonOnClick: () => void;
     handleSignOutOnClick: () => void;
 }
-const Navbar = ({ handleThemeButtonOnClick, handleSignOutOnClick }: Props) => {
-    const theme = useTheme();
-
+const Navbar = ({ theme, handleThemeButtonOnClick, handleSignOutOnClick }: Props) => {
     return (
         <AppBar position="static">
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>

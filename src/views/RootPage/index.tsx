@@ -1,4 +1,4 @@
-import { CssBaseline, GlobalStyles } from '@mui/material';
+import { CssBaseline, GlobalStyles, useTheme } from '@mui/material';
 import Routes from 'Routes';
 import { signOut } from 'aws-amplify/auth';
 import CustomisedLoader from 'components/CustomisedLoader';
@@ -13,6 +13,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 const RootPage = () => {
     const dispatch = useAppDispatch();
+    const theme = useTheme();
     const loading = useSelector(selectLoadingState);
     const snackbar = useSelector(selectSnackbar);
     const { isOpen, message, severity } = snackbar;
@@ -35,7 +36,7 @@ const RootPage = () => {
             <Suspense fallback={<CustomisedLoader isLoading={loading} />} />
             <GlobalStyles styles={globalStyles} />
             <CssBaseline />
-            <Navbar handleThemeButtonOnClick={handleThemeButtonOnClick} handleSignOutOnClick={handleSignOutOnClick} />
+            <Navbar theme={theme} handleThemeButtonOnClick={handleThemeButtonOnClick} handleSignOutOnClick={handleSignOutOnClick} />
             <Router basename="/">
                 <Routes />
             </Router>
