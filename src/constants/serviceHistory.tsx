@@ -71,6 +71,6 @@ export const COLUMN_VISIBILITY_MODEL: GridColumnVisibilityModel = {
     id: true,
 };
 
-export const INITIAL_PAGE_SIZE = 5;
+export const INITIAL_PAGE_SIZE = 10;
 
 export const PAGE_SIZE_OPTIONS = [5, 10, 20];
