@@ -1,7 +1,7 @@
 import { Box, Divider, Typography } from '@mui/material';
 import { DataGrid, GridRowParams } from '@mui/x-data-grid';
 import NoData from 'components/NoData';
-import { COLUMN_VISIBILITY_MODEL, DATA_GRID_COLUMNS } from 'constants/index';
+import { COLUMN_VISIBILITY_MODEL, DATA_GRID_COLUMNS, INITIAL_PAGE_SIZE } from 'constants/index';
 import { setEditedRequestCurrentValues, setServiceRequestForm, toggleForm } from 'context';
 import { useAppDispatch } from 'context/store';
 import useServices from 'hooks/useServices';
@@ -41,6 +41,11 @@ const RequestHistoryPage: React.FC = () => {
                         initialState={{
                             columns: {
                                 columnVisibilityModel: COLUMN_VISIBILITY_MODEL,
+                            },
+                            pagination: {
+                                paginationModel: {
+                                    pageSize: INITIAL_PAGE_SIZE,
+                                },
                             },
                         }}
                         slots={{
