@@ -1,7 +1,7 @@
 import { Box, Divider, Typography } from '@mui/material';
 import { DataGrid, GridRowParams } from '@mui/x-data-grid';
 import NoData from 'components/NoData';
-import { COLUMN_VISIBILITY_MODEL, DATA_GRID_COLUMNS, INITIAL_PAGE_SIZE } from 'constants/index';
+import { COLUMN_VISIBILITY_MODEL, DATA_GRID_COLUMNS, INITIAL_PAGE_SIZE, PAGE_SIZE_OPTIONS } from 'constants/index';
 import { setEditedRequestCurrentValues, setServiceRequestForm, toggleForm } from 'context';
 import { useAppDispatch } from 'context/store';
 import useServices from 'hooks/useServices';
@@ -53,7 +53,7 @@ const RequestHistoryPage: React.FC = () => {
                             noRowsOverlay: NoData,
                         }}
                         onRowClick={handleOnCellClick}
-                        pageSizeOptions={[5, 10, 50]}
+                        pageSizeOptions={PAGE_SIZE_OPTIONS}
                     />
                 </Box>
             </Box>
