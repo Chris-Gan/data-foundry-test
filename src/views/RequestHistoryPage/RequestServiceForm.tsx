@@ -17,7 +17,7 @@ import {
     toggleForm,
 } from 'context';
 import { useAppDispatch } from 'context/store';
-import { FormikProvider, useFormik } from 'formik';
+import { FormikHelpers, FormikProvider, useFormik } from 'formik';
 import { calculateResolutionDate } from 'helpers/serviceHistory';
 import useServiceHistories from 'hooks/useServices';
 import { ServiceRequestFormInterface } from 'interfaces';
@@ -36,9 +36,12 @@ const RequestServiceForm = () => {
     const submitButtonLabel = isEditingMode ? 'Update' : 'Create';
     const dialogHeader = isEditingMode ? 'Update Service Request' : 'Create New Service Request';
 
-    const handleOnSubmit = async (values: ServiceRequestFormInterface) => {
+    const handleOnSubmit = async (values: ServiceRequestFormInterface, formikHelpers: FormikHelpers<ServiceRequestFormInterface>) => {
         dispatch(showLoading());
-        if (!isEditingMode) await createServiceRequestMutation.mutateAsync(values);
+        if (!isEditingMode) {
+            await createServiceRequestMutation.mutateAsync(values);
+            formikHelpers.resetForm();
+        }
         if (isEditingMode && currentEditingRequest) await updateServiceRequestMutation.mutateAsync({ id: currentEditingRequest.id, values });
     };
 
